@@ -1,6 +1,6 @@
 #include "Object.h"
 #include <iostream>
-#include <cstdlib>
+#include <cstdlib> // Добавлен заголовочный файл
 #include <ctime>
 
 Object::Object(int id, int x, int y) {
@@ -31,4 +31,3 @@ void Object::printPath() {
         std::cout << "(" << path[i][0] << ", " << path[i][1] << ") ";
     }
 }
-
