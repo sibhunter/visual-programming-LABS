@@ -1,11 +1,12 @@
 #ifndef OBJECT_H
 #define OBJECT_H
 
+#include "Coordinates.h"
+
 class Object {
-private:
+protected:
     int id;
-    int x;
-    int y;
+    Coordinates position;
     int path[1000][2];
     int path_length;
 public:

@@ -1,18 +1,19 @@
-#include "Object.h"
-#include <cstdlib> 
+#include "UserEquipment.h"
+#include <cstdlib>
 #include <ctime>
 
 int main() {
     srand(time(NULL));
 
-    Object obj(1, 500, 500);
+    UserEquipment ue(1, 500, 500);
 
     for (int i = 0; i < 100; i++) {
-        obj.moveRandom();
-        obj.printPosition();
+        ue.moveRandom();
+        ue.convertToGeographicCoordinates();
+        ue.printPosition();
     }
 
-    obj.printPath();
+    ue.printPath();
 
     return 0;
 }

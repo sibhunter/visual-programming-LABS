@@ -1,28 +1,26 @@
 #include "Object.h"
 #include <iostream>
-#include <cstdlib> // Добавлен заголовочный файл
+#include <cstdlib>
 #include <ctime>
 
-Object::Object(int id, int x, int y) {
+Object::Object(int id, int x, int y) : position(x, y) {
     this->id = id;
-    this->x = x;
-    this->y = y;
     this->path_length = 0;
 }
 
 void Object::moveRandom() {
     int dx = rand() % 3 - 1;
     int dy = rand() % 3 - 1;
-    x += dx;
-    y += dy;
+    position.setX(position.getX() + dx);
+    position.setY(position.getY() + dy);
 
-    path[path_length][0] = x;
-    path[path_length][1] = y;
+    path[path_length][0] = position.getX();
+    path[path_length][1] = position.getY();
     path_length++;
 }
 
 void Object::printPosition() {
-    std::cout << "Object " << id << " is at (" << x << ", " << y << ")" << std::endl;
+    std::cout << "Object " << id << " is at (" << position.getX() << ", " << position.getY() << ")" << std::endl;
 }
 
 void Object::printPath() {

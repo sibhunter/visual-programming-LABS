@@ -3,15 +3,19 @@
 
 class Coordinates {
 private:
-int x;
-int y;
+    int x;
+    int y;
+    double latitude;
+    double longitude;
 public:
-Coordinates(int x, int y);
-int getX() const;
-int getY() const;
-void setX(int x);
-void setY(int y);
-double distanceTo(const Coordinates& other) const;
+    Coordinates(int x, int y);
+    int getX() const;
+    int getY() const;
+    void setX(int x);
+    void setY(int y);
+    double getLatitude() const;
+    double getLongitude() const;
+    double distanceTo(const Coordinates& other) const;
 };
 
 #endif
