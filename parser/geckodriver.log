@@ -1814,3 +1814,4 @@ JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at lin
 JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
 JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
 JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+1684734638380	geckodriver	INFO	Listening on 127.0.0.1:54340
